@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title" role="img">
+  <title>Sanchara</title>
+  <rect x="2" y="2" width="60" height="60" fill="#fff" stroke="#000" stroke-width="2"/>
+  <path d="M12 44c0-6 5-9 16-11 11-2 16-4 16-9 0-5-5-8-12-8-7 0-12 3-14 8M20 52c2 1 6 2 10 2 10 0 18-5 18-14 0-7-5-10-16-12-11-2-16-4-16-10 0-6 7-12 20-12" stroke="#000" stroke-width="2" fill="none"/>
+</svg>
