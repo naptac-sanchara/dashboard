@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import { useAuthStore } from "./store/auth";
 import { Layout } from "./ui/Layout";
@@ -5,19 +6,19 @@ import { AdminSignin } from "./views/AdminSignin";
 import { CreateAdmin } from "./views/CreateAdmin";
 import { Dashboard } from "./views/Dashboard";
 
-const RequireAuth = ({ children }: { children: JSX.Element }) => {
+const RequireAuth = ({ children }: { children: ReactNode }) => {
 	const token = useAuthStore(s => s.token);
 	if (!token) return <Navigate to="/signin" replace />;
 	return children;
 };
 
-const RequireGuest = ({ children }: { children: JSX.Element }) => {
+const RequireGuest = ({ children }: { children: ReactNode }) => {
 	const token = useAuthStore(s => s.token);
 	if (token) return <Navigate to="/dashboard" replace />;
 	return children;
 };
 
-const RequireSuperAdmin = ({ children }: { children: JSX.Element }) => {
+const RequireSuperAdmin = ({ children }: { children: ReactNode }) => {
 	const user = useAuthStore(s => s.user);
 	if (!user) return <Navigate to="/signin" replace />;
 	if (user.role !== "SUPER_ADMIN") return <Navigate to="/dashboard" replace />;
