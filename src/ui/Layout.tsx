@@ -31,7 +31,9 @@ export const Layout = () => {
 					{token ? (
 						<nav style={{ display: "flex", gap: 8 }}>
 							<NavLink to="/dashboard" label="Dashboard" />
-							<NavLink to="/create" label="Create Admin" />
+							{user?.role === "SUPER_ADMIN" ? (
+								<NavLink to="/create" label="Create Admin" />
+							) : null}
 						</nav>
 					) : null}
 				</div>
