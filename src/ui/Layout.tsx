@@ -117,11 +117,7 @@ export const Layout = () => {
             <div className="mt-2">Secure admin for Sanchara platform.</div>
           </div>
           <div>
-            <div className="font-semibold text-gray-800">Links</div>
-            <ul className="mt-2 space-y-1">
-              <li><a className="hover:text-black" href="/dashboard">Dashboard</a></li>
-              {user?.role === "SUPER_ADMIN" ? (<li><a className="hover:text-black" href="/create">Create Admin</a></li>) : null}
-            </ul>
+      
           </div>
           <div className="sm:text-right">
             <div className="font-semibold text-gray-800">Status</div>
