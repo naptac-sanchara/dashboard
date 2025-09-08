@@ -177,7 +177,7 @@ const RecentCard = memo(({ value }: { value: RecentMetric }) => {
                 {items.slice(0, 5).map((it: any) => (
                   <li key={it.id || it.email || Math.random()} className="px-3 py-2 flex items-center justify-between">
                     <div className="flex items-center gap-2 min-w-0">
-                      <RowIcon item={it} section={section} />
+                      <RowIcon section={section} />
                       <span className="text-sm text-gray-900 truncate">
                         {it.email || it.platform || it.id}
                         {it.role ? <span className="text-gray-600"> · {it.role}</span> : null}
@@ -204,7 +204,7 @@ const SectionIcon = ({ name }: { name: string }) => {
   return <User className="h-4 w-4 text-emerald-600" />;
 };
 
-const RowIcon = ({ item, section }: { item: any; section: string }) => {
+const RowIcon = ({ section }: { section: string }) => {
   const s = section.toLowerCase();
   if (s.includes("admin")) return <UserRoundPlus className="h-4 w-4 text-amber-600" />;
   if (s.includes("visit")) return <LogIn className="h-4 w-4 text-emerald-600" />;
