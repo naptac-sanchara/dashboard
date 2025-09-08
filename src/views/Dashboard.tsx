@@ -33,7 +33,13 @@ export const Dashboard = () => {
 						Object.entries(metrics).map(([key, value]) => (
 							<div key={key} className="card">
 								<div className="muted" style={{ fontSize: 12 }}>{key}</div>
-								<div style={{ fontSize: 22 }}>{String(value)}</div>
+								{value !== null && typeof value === 'object' ? (
+									<pre style={{ margin: '8px 0 0', padding: 12, border: '1px solid #000', background: '#fff', overflowX: 'auto', fontSize: 12 }}>
+										{JSON.stringify(value, null, 2)}
+									</pre>
+								) : (
+									<div style={{ fontSize: 22 }}>{String(value)}</div>
+								)}
 							</div>
 						))
 					)}
