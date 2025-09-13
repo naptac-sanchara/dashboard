@@ -59,16 +59,18 @@ export const Dashboard = () => {
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-<iframe
-  title="Sanchara_Dashboard"
-  width="1140"
-  height="541.25"
-  src="https://app.powerbi.com/reportEmbed?reportId=ecfa2593-4a6d-4344-9f55-14e9da2c80cb&autoAuth=true&ctid=57f28137-86e8-4b16-b8c0-0450878e29b0"
-  frameBorder={0}
-  allowFullScreen
-></iframe>
-        </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 h-[calc(100vh-100px)]">
+  <div className="col-span-full sm:col-span-2 lg:col-span-3 h-full">
+    <iframe
+      title="Sanchara_Dashboard"
+      src="https://app.powerbi.com/reportEmbed?reportId=ecfa2593-4a6d-4344-9f55-14e9da2c80cb&autoAuth=true&ctid=57f28137-86e8-4b16-b8c0-0450878e29b0"
+      className="w-full h-full"
+      frameBorder="0"
+      allowFullScreen
+    ></iframe>
+  </div>
+</div>
+
       )}
     </section>
   );
