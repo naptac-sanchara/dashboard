@@ -28,10 +28,13 @@ ChartJS.register(
 
 
 export const Dashboard = () => {
-  const [loading, ] = useState(true);
+  const [loading,setLoading] = useState(true);
   const [error,] = useState<string | null>(null);
 
 
+  setTimeout(() => {
+    setLoading(false);
+  }, 1000);
 
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
