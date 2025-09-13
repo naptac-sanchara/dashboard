@@ -79,6 +79,9 @@ export const Layout = () => {
           {token ? (
             <nav className="hidden md:flex gap-5 ml-2">
               <NavLink to="/dashboard" label="Dashboard" />
+              <NavLink to="/users" label="Users" />
+              {/* Guests removed from navbar */}
+              <NavLink to="/analytics" label="Analytics" />
               {user?.role === "SUPER_ADMIN" ? (
                 <NavLink to="/create" label="Create Admin" />
               ) : null}
